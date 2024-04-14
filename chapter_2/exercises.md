@@ -5,9 +5,9 @@ list is more appropriate than an array.
 accomodate the new data, however inserting data into an array anywhere other 
 than the end takes O(n) time as items must change index.
 - When a data structure is read many times, indexes of an array allow data to
-be quickly accessed in O(1). Conversely, a linked list requires O(n) time to read an
-item as each subsequent index must be accessed to reveal the location of the
-next item until the target is found.
+be quickly accessed in O(1). Conversely, a linked list requires O(n) time to 
+read an item as each subsequent index must be accessed to reveal the location 
+of the next item until the target is found.
 
 # 2.2
 - If building an application for a restaurant where orders are added to the 
