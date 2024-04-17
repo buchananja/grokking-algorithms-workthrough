@@ -18,3 +18,19 @@ def binary_search(target_list, target_value):
 
 numbers = [0, 2, 4, 8, 10, 22, 45, 46, 77, 86, 90, 101, 200]
 print(binary_search(numbers, 22))
+
+
+def binary_search_recurse(arr, tar, start = 0, end = None):
+    
+    if end is None:
+        end = len(arr) - 1
+    if start > end:
+        return None
+    mid = (start + end) // 2
+    
+    if arr[mid] == tar:
+        return mid
+    elif arr[mid] > tar:
+        return binary_search_recurse(arr, tar, start, mid - 1)
+    else:
+        return binary_search_recurse(arr, tar, mid + 1, end)
