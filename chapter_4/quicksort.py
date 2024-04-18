@@ -37,3 +37,30 @@ def binary_search_recurse(arr, tar, start = 0, end = None):
         return binary_search_recurse(arr, tar, start, mid - 1)
     else:
         return binary_search_recurse(arr, tar, mid + 1, end)
+    
+    
+def partition(arr, low_index, high_index):
+    '''partitioning with end element as pivot'''
+    
+    # set i to be one less than beginning and pivot to last element
+    i = low_index - 1
+    pivot = arr[high_index]
+    
+    # when j is less/equal to pivot, increment i then swap i and j values
+    for j in range(low_index, high_index):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    
+    # swaps i+1 with pivot
+    arr[i + 1], arr[high_index] = arr[high_index], arr[i + 1]
+    return (i + 1)
+
+
+def quicksort(arr, low_index, high_index):
+    '''quicksort algorithm with end index sorting in-place'''
+    
+    if low_index < high_index:
+        pivot_index = partition(arr, low_index, high_index)
+        quicksort(arr, low_index, pivot_index - 1)
+        quicksort(arr, pivot_index + 1, high_index)
