@@ -76,3 +76,17 @@ def binary_search_recurse(arr, tar, start = 0, end = None):
         return binary_search_recurse(arr, tar, start, mid - 1)
     else:
         return binary_search_recurse(arr, tar, mid + 1, end)
+
+
+# 4.5
+- Printing the value of each element of an array will take O(n) time.
+
+# 4.6
+- Doubling the value of each element of an array will take O(n) time.
+
+# 4.7
+- Doubling the first element of an array will take O(1) time.
+
+# 4.8
+- If you multiply every element in an array first by 2, 3, 4, 5, etc., it will
+take O(n) time.
