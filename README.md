@@ -3,14 +3,14 @@
 - Availible at: https://www.manning.com/books/grokking-algorithms
 
 Contents:
-- \1. Introduction to Algorithms
-- \2. Selection Sort
-- \3. Recursion
-- \4. Quicksort
-- \5. Hash Tables
-- \6. Breadth-First Search
-- \7. Dijkstra's Algorithm
-- \8. Greedy Algorithms
-- \9. Dynamic Programming
-- \10. K-Nearest Neighbors
-- \11. Where to go next
+- 1_ Introduction to Algorithms
+- 2_ Selection Sort
+- 3_ Recursion
+- 4_ Quicksort
+- 5_ Hash Tables
+- 6_ Breadth-First Search
+- 7_ Dijkstra's Algorithm
+- 8_ Greedy Algorithms
+- 9_ Dynamic Programming
+- 10_ K-Nearest Neighbors
+- 11_ Where to go next
