@@ -57,10 +57,17 @@ def partition(arr, low_index, high_index):
     return (i + 1)
 
 
-def quicksort(arr, low_index, high_index):
+def quicksort(arr, low_index = 0, high_index = None):
     '''quicksort algorithm with end index sorting in-place'''
     
+    if high_index is None:
+        high_index = len(arr) - 1
+
     if low_index < high_index:
         pivot_index = partition(arr, low_index, high_index)
         quicksort(arr, low_index, pivot_index - 1)
         quicksort(arr, pivot_index + 1, high_index)
+
+arr = [2, 1, 4, 3, 6, 8, 5, 9, 0, 7]
+quicksort(arr)        
+print(arr)
