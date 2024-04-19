@@ -28,7 +28,21 @@ def binary_search_2(arr, tar, left, right):
             return binary_search_2(arr, tar, mid + 1, right)
     else:
         return -1
+    
+
+def binary_search_3(arr, tar, left, right):
+    '''iteratively binary searches an array for target index'''
+
+    while left <= right:
+        mid = (left + right) //2
+        if arr[mid] == tar:
+            return mid
+        elif arr[mid] > tar:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return -1
 
 
 arr = [2, 4, 5, 9, 11]
-print(binary_search_1(arr, 2, left = 0, right = len(arr) - 1))
+print(binary_search_3(arr, 2, left = 0, right = len(arr) - 1))
