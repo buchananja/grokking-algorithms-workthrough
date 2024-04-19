@@ -9,7 +9,7 @@ def check_voter(name):
         print('This user may vote.')
 
 
-def alphabet_hash(string, table_size):
+def name_hash(string, table_size):
     '''
     returns an index based on summation of string ascii values in input string
     moduli size of hash table
