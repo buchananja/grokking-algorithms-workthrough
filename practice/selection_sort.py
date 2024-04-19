@@ -2,8 +2,8 @@
 def selection_sort(arr, ascending = True):
     '''performs a selection sort on an array'''
 
-    def find_extreme(arr, start, largest = True):
-        '''finds the smallest/largest number in array'''
+    def find_extreme(arr, start, largest):
+        '''finds the smallest/largest number in array''' 
 
         ext_value = arr[start]
         ext_index = start
@@ -18,7 +18,7 @@ def selection_sort(arr, ascending = True):
                     ext_value = arr[i]
                     ext_index = i 
         return ext_index
-
+   
     # outer loop iterates over original array index
     for i in range(len(arr)):
         # inner loops iterate over unsorted remaining array
@@ -26,7 +26,8 @@ def selection_sort(arr, ascending = True):
             ext_val_index = find_extreme(arr, i, largest = False)
         else:
             ext_val_index = find_extreme(arr, i, largest = True)
-        arr[i], arr[ext_val_index] = arr[ext_val_index], arr[i]
+        # swaps extreme value in place of i 
+        (arr[i], arr[ext_val_index]) = (arr[ext_val_index], arr[i])
 
 
 # this method returns a new array
@@ -60,3 +61,4 @@ def selection_sort(arr, ascending = True):
         else:
             ext_val = find_extreme(arr, largest = True)
             sorted.append(arr.pop(ext_val))
+    return sorted
