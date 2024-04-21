@@ -28,6 +28,7 @@ def binary_search_recurse(arr, tar, start = 0, end = None):
     if end is None:
         end = len(arr) - 1
     mid = (start + end) // 2
+    
     if arr[mid] == tar:
         return mid
     elif arr[mid] > tar:
